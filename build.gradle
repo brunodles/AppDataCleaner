@@ -12,6 +12,10 @@ buildscript {
 apply plugin: 'groovy'
 apply plugin: "net.ltgt.apt"
 
+compileGroovy {
+    groovyOptions.javaAnnotationProcessing = true
+}
+
 repositories {
     jcenter()
 }
@@ -30,7 +34,7 @@ dependencies {
     testCompile 'junit:junit:4.11'
     testCompile 'org.assertj:assertj-core:3.6.1'
     testCompile 'com.mscharhag.oleaster:oleaster-runner:0.1.2'
-    testCompile 'com.brunodles:oleaster-suiterunner:0.1.1'
+    testCompile 'com.brunodles:oleaster-suiterunner:0.3.0'
 
     testCompile 'org.mockito:mockito-core:2.0.54-beta'
 }
